@@ -64,8 +64,21 @@
 
 <!-- FOOTER -->
 <footer>
-    <p>© 2026 Biyhaa | Projects Page</p>
+    <p>© 2026 Biyhaa</p>
 </footer>
+
+<script>
+const links = document.querySelectorAll(".nav-link");
+const currentPage = window.location.pathname.split("/").pop();
+
+links.forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (href === currentPage) {
+        link.classList.add("active");
+    }
+});
+</script>
 
 </body>
 </html>
