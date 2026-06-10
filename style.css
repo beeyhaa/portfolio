@@ -209,3 +209,36 @@ footer {
         transform: translateY(0);
     }
 }
+
+/* =======================
+   ACTIVE NAV LINK
+======================= */
+.nav-link {
+    position: relative;
+    padding: 6px 0;
+}
+
+/* underline animation */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #38bdf8;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* active page */
+.nav-link.active {
+    color: #38bdf8;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
